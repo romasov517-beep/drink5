@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Надежда и Защита — Наши дипломы</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="Эмблема.webp" alt="Логотип Надежда и Защита" class="logo-img">
+                <span class="logo-text">Надежда и защита</span>
+            </div>
+
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <a href="index.html" class="back-link">Вернуться на главную страницу</a>
+
+    <!-- Слайдер -->
+    <div class="slider-container">
+        <h2 class="slider-title">Наши дипломы</h2>
+        <div class="slider" id="imageSlider">
+            <img src="1.jpg" alt="Диплом 1">
+            <img src="2.jpg" alt="Диплом 2">
+            <img src="3.jpg" alt="Диплом 3">
+            <img src="4.jpg" alt="Диплом 4">
+        </div>
+    </div><br>
+
+
+
+<!--блок наш офис-->
+<div class="slider-container">
+        <h2 class="slider-title">Наш офис</h2>
+        <div class="slider" id="imageSlider">
+            <img src="ингосстрах.jpg" alt="вход 1">
+            <img src="вход2.jpg" alt="вход 2">
+            <img src="внутри.jpg" alt="вход 3">
+            <img src="вход 3.jpg" alt="вход 4">
+        </div>
+    </div><br>
+
+
+    <script>
+        // Бургер-меню
+        const burger = document.getElementById('burgerMenu');
+        const nav = document.getElementById('navLinks');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+    </script>
+
+
+<!-- Новый блок: Карта -->
+<section class="slider-container" id="contact"><br>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Наши контакты</h2>
+        </div>
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=59853347942" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</section> 
+
+<footer id="contact">
+    <div class="slider-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Эмблема.webp" alt="Логотип Надежда и Защита" class="logo-img">
+                <span class="logo-text">Надежда и защита</span>
+            </div>
+            <div class="slider-container">
+                <p><strong>Телефон:</strong> <a href="tel:+79993929222">+7 (999) 39-29-222</a></p>
+                <p><strong>Адрес:</strong> Россия, Нижегородская обл., г. Бор, Интернациональная 32а, офис 210</p>
+                <p><strong>График работы:</strong> Ежедневно с 08:00 до 18:00</p>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
