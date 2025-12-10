@@ -1,0 +1,772 @@
+
+        /* Сброс стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Используем шрифт из примера */
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5; /* Светлый фон */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- Шапка (Header) --- */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Отступ между логотипом и текстом */
+        }
+
+        /* --- Стили для логотипа --- */
+        .logo-img {
+            width: 60px; /* Ширина логотипа */
+            height: 60px; /* Высота логотипа */
+        }
+
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .burger-menu {
+            display: none; /* Скрыто на больших экранах */
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .burger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* --- Слайдер --- */
+        .slider {
+            position: relative;
+            height: 500px; /* Высота слайдера */
+            overflow: hidden;
+            margin-bottom: 40px;
+            background-color: #f5f5dc; /* Бежевый фон */
+        }
+
+        .slider-inner {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* --- Убрано фоновое изображение для первого слайда --- */
+        .slide{
+            background-image: none; /* Убираем фоновое изображение */
+            background-color: #4CAF50; /* Добавлен фоновый цвет для примера */
+        }
+
+        .slide {
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+            border-radius: 8px;
+        }
+
+        .slide-content h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .slide-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .slider-nav button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.5em;
+        }
+
+        .slider-nav button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .slider-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: white;
+        }
+
+        /* --- Основной контент --- */
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8em;
+            color: #4CAF50;
+        }
+
+        /* --- Слайдер Услуг --- */
+        .services-slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px; /* Ограничиваем ширину */
+            margin: 0 auto; /* Центрируем */
+            height: 300px; /* Высота контейнера слайдера */
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #f5f5dc; /* Бежевый фон */
+        }
+
+        .services-slides {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .service-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .service-slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .service-card-slider {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 300px; /* Ограничиваем ширину карточки */
+            margin: 0 10px; /* Отступы по бокам */
+        }
+
+        .service-card-slider h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        /* --- Кнопки навигации для слайдера услуг --- */
+        .services-slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .services-slider-nav button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .services-slider-nav button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .services-slider-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .services-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .services-indicator.active {
+            background-color: #4CAF50;
+        }
+
+        /* --- Форма --- */
+        .form-section {
+            background-color: #f9f9f9; /* Светлый фон для секции формы */
+            padding: 40px 0;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .statistics {
+            background-color: #4CAF50; /* Зелёный фон */
+            color: white;
+            padding: 40px 0;
+        }
+
+        .digits-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .digit-item {
+            text-align: center;
+        }
+
+        .number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* --- Новый блок: Для чего нужно страхование --- */
+        .why-insurance-section {
+            background-color: #fff; /* Белый фон */
+            padding: 40px 0;
+        }
+
+        .why-insurance-container {
+            display: flex;
+            flex-wrap: wrap; /* Для адаптивности */
+            align-items: center;
+            gap: 40px;
+        }
+
+        .why-insurance-image {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .why-insurance-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .why-insurance-text {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+        }
+
+        .why-insurance-text h3 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .why-insurance-text p {
+            margin-bottom: 10px;
+        }
+
+        /* --- Новый блок: О нас --- */
+        .about-section {
+            background-color: #fff; /* Белый фон */
+            padding: 40px 0;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap; /* Для адаптивности */
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-image {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+        }
+
+        .about-text h3 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 10px;
+        }
+
+        /* --- Новый блок: Отзывы --- */
+        .reviews-section {
+            background-color: #f9f9f9; /* Светлый фон */
+            padding: 40px 0;
+        }
+
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap; /* Для адаптивности */
+            align-items: center;
+            gap: 40px;
+        }
+
+        .reviews-image {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .reviews-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .reviews-text {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+        }
+
+        .reviews-text h3 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .reviews-text p {
+            margin-bottom: 10px;
+        }
+
+        /* --- Новый блок: Карта --- */
+        .map-section {
+            padding: 40px 0;
+            background-color: #fff; /* Белый фон */
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 560px; /* Максимальная ширина как у iframe */
+            height: 400px; /* Высота как у iframe */
+            margin: 0 auto; /* Центрируем */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Убираем рамку iframe */
+        }
+
+        /* --- Новый блок: Наши достижения --- */
+        .achievements-section {
+            background-color: #f5f5dc; /* Бежевый фон */
+            padding: 40px 0;
+        }
+
+        .achievements-container {
+            display: flex;
+            flex-wrap: wrap; /* Для адаптивности */
+            align-items: center;
+            gap: 40px;
+        }
+
+        .achievements-image {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .achievements-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .achievements-text {
+            flex: 1 1 300px; /* Растягиваемый элемент, мин. ширина 300px */
+        }
+
+        .achievements-text h3 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .achievements-text ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .achievements-text li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .achievements-text li:before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- Футер --- */
+        footer {
+            background-color: white;
+            color: #333;
+            padding: 40px 0;
+            border-top: 1px solid #ddd; /* Линия сверху */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Для адаптивности */
+            gap: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo .logo-img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .footer-logo .logo-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-contact p {
+            margin: 0;
+        }
+
+        .footer-contact a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: goldenrod;
+            border-radius: 50%;
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .footer-social a:hover {
+            background-color: goldenrod;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* --- Адаптивность --- */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                display: none; /* Скрыто по умолчанию */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: rgb(154, 200, 226); /* Белый фон */
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger-menu {
+                display: flex; /* Показываем бургер */
+            }
+
+            .slider {
+                height: 300px; /* Уменьшаем высоту слайдера */
+            }
+
+            .slide-content h2 {
+                font-size: 1.5em;
+            }
+
+            .slide-content p {
+                font-size: 1em;
+            }
+
+            .why-insurance-container,
+            .about-container,
+            .reviews-container,
+            .achievements-container {
+                flex-direction: column; /* Элементы друг под другом */
+            }
+
+            .services-slider-container {
+                height: auto; /* Убираем фиксированную высоту для адаптивности */
+                padding: 20px 0; /* Добавим отступы */
+                position: relative; /* Для позиционирования кнопок */
+            }
+            .service-slide {
+                position: static; /* Убираем абсолютное позиционирование */
+                opacity: 1; /* Показываем все слайды */
+                visibility: visible;
+                display: block; /* Используем block вместо flex */
+            }
+            .service-card-slider {
+                margin: 10px auto; /* Центрируем карточки */
+                max-width: calc(100% - 40px); /* Уменьшаем ширину с учетом отступов */
+            }
+            .services-slider-nav,
+            .services-slider-indicators {
+                display: none; /* Скрываем кнопки и индикаторы на мобильных */
+            }
+
+            .digits-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Адаптивность для карты */
+            .map-container {
+                height: 300px; /* Уменьшаем высоту на мобильных */
+            }
+
+            /* Адаптивность для блока достижений */
+            .achievements-image {
+                order: 2; /* Переносим изображение вниз на мобильных */
+            }
+            .achievements-text {
+                order: 1; /* Переносим текст наверх на мобильных */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider {
+                height: 250px; /* Еще меньше */
+            }
+
+            .slider-nav button {
+                font-size: 1.2em;
+                padding: 8px 12px;
+            }
+             /* Адаптивность для карты */
+            .map-container {
+                height: 250px; /* Еще меньше */
+            }
+        }
+ 
