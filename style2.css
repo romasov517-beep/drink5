@@ -1,0 +1,220 @@
+   /* Сброс и общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #beb05f;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Ссылка "назад" */
+.back-link {
+    display: block;
+    padding: 12px 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Навигация */
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Бургер-меню (по умолчанию скрыт на десктопе) */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+/* Слайдер */
+.slider-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center; /* центрирует inline-block, но не flex */
+}
+
+.slider {
+    display: flex;
+    justify-content: center; /* ← Центрирует картинки, ЕСЛИ они помещаются */
+    gap: 30px;
+    padding: 10px 0 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Чтобы justify-content работал даже при overflow-x, картинки не должны "выталкивать" друг друга */
+.slider img {
+    flex: 0 0 auto;
+    max-width: 280px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.slider-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.slider {
+    display: flex;
+    gap: 30px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 0 0 auto;
+    max-width: 280px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.slider img:hover {
+    transform: scale(1.03);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 16px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        display: none; /* По умолчанию скрыто */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .slider img {
+        max-width: 240px;
+        height: 180px;
+    }
+
+    .slider-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider img {
+        max-width: 200px;
+        height: 150px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .back-link {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
+
+.back-link{color:white;}
