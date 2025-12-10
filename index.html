@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<header>
+
+    <div class="container header-content">
+        <!-- Добавлен логотип и название -->
+        <div class="logo">
+            <img src="Эмблема.webp" alt="Логотип Надежда и Защита" class="logo-img">
+            <span class="logo-text">Надежда и защита</span>
+        </div>
+        <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </div>
+
+</header>
+
+<section class="slider" id="main-slider">
+    <div class="slider-inner" id="sliderInner">
+        <!-- Убрана фоновая картинка, добавлен цвет -->
+        <div class="slide">
+            <div class="slide-content">
+                <h2>ВСЕ ВИДЫ СТРАХОВАНИЯ</h2>
+                <p>КАСКО, ОСАГО, ипотека, недвижимость, ДМС, несчастные случаи, для выезжающих за рубеж</p>
+                <a href="#services" class="btn">Узнать подробнее</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://via.placeholder.com/1200x500/2196F3/white?text=Подбор+предложений');">
+            <div class="slide-content">
+                <h2>ПОДБЕРЕМ ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ ОТ НАШИХ ПАРТНЕРОВ</h2>
+                <p>39 страховых компаний уже готовы продать вам полис, при этом только у нас вы купите его с максимальной выгодой и без очередей.</p>
+                <a href="#calculator" class="btn">Рассчитать стоимость</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://via.placeholder.com/1200x500/FF9800/white?text=Сэкономьте+время');">
+            <div class="slide-content">
+                <h2>Сэкономим вам до 3 дней свободного времени на поиске выгодных условий</h2>
+                <p>Просто оставьте заявку и мы доставим полис на дом.</p>
+                <a href="#contact" class="btn">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+    <div class="slider-nav">
+        <button id="prevBtn">&lt;</button>
+        <button id="nextBtn">&gt;</button>
+    </div>
+    <div class="slider-indicators" id="sliderIndicators">
+        <!-- Индикаторы будут добавлены через JS -->
+    </div>
+</section>
+
+
+
+<!-- Новый блок: Для чего нужно страхование -->
+<section class="section why-insurance-section" id="why-insurance">
+    <div class="container">
+        <div class="section-title">
+            <h2>Для чего нужно страхование</h2>
+        </div>
+        <div class="why-insurance-container">
+            <div class="why-insurance-image">
+                <!-- Замените src на путь к вашему реальному фото -->
+                <img src="для чего нужно.jpg" alt="Зачем нужно страхование">
+            </div>
+            <div class="why-insurance-text">
+                <h3>Понимание важности финансовой защиты</h3>
+                <p>Страхование — это не просто трата денег, это разумное вложение в вашу финансовую стабильность и спокойствие. Оно защищает вас и вашу семью от непредвиденных расходов, связанных с непредвиденными обстоятельствами, такими как аварии, болезни, кражи или стихийные бедствия.</p>
+                <p>Правильно подобранный страховой полис помогает избежать серьёзных финансовых потерь, сохранить имущество, здоровье и уверенность в завтрашнем дне.</p>
+                <!-- Кнопка с внешней ссылкой -->
+                <a href="https://www.sogaz.ru/sogaz/pressroom/aboutus/856645/" target="_blank" class="btn">Для чего нужно страхование</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Новый блок: О нас -->
+<section class="section about-section" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>О нас</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-image">
+                <!-- Замените src на путь к вашему реальному фото -->
+                <img src="ингосстрах.jpg" alt="Наш офис">
+            </div>
+            <div class="about-text">
+                <h3>Надежный партнер в сфере страхования</h3>
+                <p>С 2006 года мы помогаем клиентам защищать свои интересы и имущество. Наша команда обладает глубокими знаниями и опытом в различных сферах страхования.</p>
+                <p>Мы работаем честно и прозрачно, стремясь к долгосрочному сотрудничеству. Наша цель — предоставить вам уверенность и спокойствие, зная, что вы защищены.</p>
+                <!-- Кнопка с внешней ссылкой -->
+                <a href="index2.html" target="_blank" class="btn">Подробнее о компании</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Новый блок: Отзывы -->
+<section class="section reviews-section" id="reviews">
+    <div class="container">
+        <div class="section-title">
+            <h2>Отзывы</h2>
+        </div>
+        <div class="reviews-container">
+            <div class="reviews-image">
+                <!-- Замените src на путь к вашему реальному фото -->
+                <img src="отзавы.png" alt="Отзывы клиентов">
+            </div>
+            <div class="reviews-text">
+                <h3>Ваши мнения важны для нас</h3>
+                <p>Прочитайте, что говорят о нас наши клиенты, или оставьте свой отзыв, поделившись своим опытом сотрудничества.</p>
+                <a href="https://yandex.ru/maps/org/strakhovaya_kompaniya/59853347942/reviews/?ll=44.065784%2C56.361733&z=15" target="_blank" class="btn">Оставить отзыв</a>
+            </div>
+        </div>
+    </div>
+</section> 
+
+
+
+<!-- Анимированный слайдер Услуг -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Наши Услуги</h2>
+            <h3 class="block-title__main">Мы предоставляем широкий спектр страховых услуг</h3>
+        </div>
+        <div class="services-slider-container">
+            <!-- Кнопки навигации -->
+            <div class="services-slider-nav">
+                <button id="prevServiceBtn">&lt;</button>
+                <button id="nextServiceBtn">&gt;</button>
+            </div>
+            <div class="services-slides" id="servicesSlides">
+                <!-- Слайд 1 -->
+                <div class="service-slide active">
+                    <div class="service-card-slider">
+                        <h3>ОСАГО</h3>
+                        <p>Обязательное страхование гражданской ответственности владельцев транспортных средств</p>
+                    </div>
+                </div>
+                <!-- Слайд 2 -->
+                <div class="service-slide">
+                    <div class="service-card-slider">
+                        <h3>КАСКО</h3>
+                        <p>Страхование автомобиля от ущерба, хищения и других рисков</p>
+                    </div>
+                </div>
+                <!-- Слайд 3 -->
+                <div class="service-slide">
+                    <div class="service-card-slider">
+                        <h3>Добровольное медицинское страхование (ДМС)</h3>
+                        <p>Качественное и своевременное медицинское обслуживание</p>
+                    </div>
+                </div>
+                <!-- Слайд 4 -->
+                <div class="service-slide">
+                    <div class="service-card-slider">
+                        <h3>Страхование недвижимости</h3>
+                        <p>Страхование вашей недвижимости от всех видов рисков</p>
+                    </div>
+                </div>
+                 <!-- Слайд 5 -->
+                 <div class="service-slide">
+                    <div class="service-card-slider">
+                        <h3>Страхование от несчастных случаев</h3>
+                        <p>Страхование жизни и здоровья от последствий несчастных случаев</p>
+                    </div>
+                </div>
+                <!-- Слайд 6 -->
+                <div class="service-slide">
+                    <div class="service-card-slider">
+                        <h3>Страхование выезжающих за рубеж</h3>
+                        <p>Полис, необходимый для получения визы и поездки</p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-slider-indicators" id="servicesIndicators">
+                <!-- Индикаторы будут добавлены через JS -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="form-section" id="calculator">
+    <div class="container">
+        <div class="section-title">
+            <h2>Подобрать выгодное предложение</h2>
+        </div>
+        <div class="form-container">
+            <form class="services_form">
+                <input type="hidden" name="type" value="Предложение">
+                <div class="form-group">
+                    <label for="service">Выберите услугу:</label>
+                    <select name="Услуга" id="service" required>
+                        <option value="ОСАГО">ОСАГО</option>
+                        <option value="КАСКО">КАСКО</option>
+                        <option value="Страхование ипотеки">Страхование ипотеки</option>
+                        <option value="Добровольное медицинское страхование">Добровольное медицинское страхование</option>
+                        <option value="Страхование от несчастных случаев">Страхование от несчастных случаев</option>
+                        <option value="Страхование выезжающих за рубеж">Страхование выезжающих за рубеж</option>
+                        <option value="Страхование недвижимости">Страхование недвижимости</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Укажите телефон для связи:</label>
+                    <input type="tel" class="form_phone" name="Телефон" id="phone" required placeholder="+7(000) 000-00-00" data-requared="true">
+                </div>
+                <input type="submit" value="Подобрать выгодное предложение" class="btn">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Новый блок: Наши достижения -->
+<section class="section achievements-section" id="achievements">
+    <div class="container">
+        <div class="section-title">
+            <h2>Наши достижения</h2>
+        </div>
+        <div class="achievements-container">
+            <div class="achievements-image">
+                <!-- Замените src на путь к вашему реальному фото -->
+                <img src="достижения.jpg" alt="Наши достижения">
+            </div>
+            <div class="achievements-text">
+                <h3>Почему выбирают нас</h3>
+                <ul>
+                    <li>Более 10 лет успешной работы на рынке страхования.</li>
+                    <li>Более 871 500 выданных полисов.</li>
+                    <li>Партнерство с 39 ведущими страховыми компаниями.</li>
+                    <li>Высокий уровень удовлетворенности клиентов (98%).</li>
+                    <li>Команда опытных экспертов, готовых помочь в любой ситуации.</li>
+                    <li>Персональный подход к каждому клиенту.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Новый блок: Карта -->
+<section class="section map-section" id="map">
+    <div class="container">
+        <div class="section-title">
+            <h2>Наши контакты</h2>
+        </div>
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=59853347942" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Подвал -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Эмблема.webp" alt="Логотип Надежда и Защита" class="logo-img">
+                <span class="logo-text">Надежда и защита</span>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Телефон:</strong> <a href="tel:+79993929222">+7 (999) 39-29-222</a></p>
+                <p><strong>Адрес:</strong> Россия, Нижегородская обл., г. Бор, Интернациональная 32а, офис 210</p>
+                <p><strong>График работы:</strong> Ежедневно с 08:00 до 18:00</p>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+<script>
+    // --- Бургерное меню ---
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navLinks = document.getElementById('navLinks');
+
+    burgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        // Анимация бургера (опционально)
+        burgerMenu.classList.toggle('active');
+    });
+
+    // --- Слайдер (основной) ---
+    const sliderInner = document.getElementById('sliderInner');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicatorsContainer = document.getElementById('sliderIndicators');
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Создаем индикаторы
+    for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement('span');
+        indicator.classList.add('indicator');
+        if (i === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToSlide(i));
+        indicatorsContainer.appendChild(indicator);
+    }
+    const indicators = document.querySelectorAll('.indicator');
+
+    function updateSlider() {
+        sliderInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+        indicators.forEach((ind, index) => {
+            ind.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function goToSlide(n) {
+        currentSlide = n;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Автоматическая прокрутка
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    // Остановить при наведении
+    const slider = document.getElementById('main-slider');
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    slider.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+
+    // --- Анимированный слайдер Услуг ---
+    const servicesSlidesContainer = document.getElementById('servicesSlides');
+    const serviceSlides = document.querySelectorAll('.service-slide');
+    const servicesIndicatorsContainer = document.getElementById('servicesIndicators');
+    const prevServiceBtn = document.getElementById('prevServiceBtn');
+    const nextServiceBtn = document.getElementById('nextServiceBtn');
+
+    let currentServiceSlide = 0;
+    const totalServiceSlides = serviceSlides.length;
+
+    // Создаем индикаторы для слайдера услуг
+    for (let i = 0; i < totalServiceSlides; i++) {
+        const indicator = document.createElement('span');
+        indicator.classList.add('services-indicator');
+        if (i === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToServiceSlide(i));
+        servicesIndicatorsContainer.appendChild(indicator);
+    }
+    const servicesIndicators = document.querySelectorAll('.services-indicator');
+
+    function updateServiceSlider() {
+        serviceSlides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentServiceSlide);
+        });
+        servicesIndicators.forEach((ind, index) => {
+            ind.classList.toggle('active', index === currentServiceSlide);
+        });
+    }
+
+    function goToServiceSlide(n) {
+        currentServiceSlide = n;
+        updateServiceSlider();
+    }
+
+    function nextServiceSlide() {
+        currentServiceSlide = (currentServiceSlide + 1) % totalServiceSlides;
+        updateServiceSlider();
+    }
+
+    function prevServiceSlide() {
+        currentServiceSlide = (currentServiceSlide - 1 + totalServiceSlides) % totalServiceSlides;
+        updateServiceSlider();
+    }
+
+    // Обработчики кликов для кнопок слайдера услуг
+    prevServiceBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Предотвращаем прокрутку страницы
+        prevServiceSlide();
+    });
+    nextServiceBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Предотвращаем прокрутку страницы
+        nextServiceSlide();
+    });
+
+    // Автоматическая прокрутка для слайдера услуг
+    let serviceSlideInterval = setInterval(nextServiceSlide, 4000); // Каждые 4 секунды
+
+    // Остановить при наведении на контейнер слайдера
+    servicesSlidesContainer.addEventListener('mouseenter', () => {
+        clearInterval(serviceSlideInterval);
+    });
+    servicesSlidesContainer.addEventListener('mouseleave', () => {
+        serviceSlideInterval = setInterval(nextServiceSlide, 4000);
+    });
+
+    // --- Форма ---
+    // Простой пример обработки формы
+    document.querySelector('.services_form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Предотвращаем отправку формы по умолчанию
+        // Здесь можно добавить код для отправки данных на сервер
+        alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
+        this.reset(); // Очищаем форму
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
